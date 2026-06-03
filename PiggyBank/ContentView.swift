@@ -59,6 +59,13 @@ struct ContentView: View {
                     .frame(width: 550) // 원하는 크기로 조절
                     .offset(x: -20, y: -120)
                     .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 10)
+                // 💡 팁: 아직 준비된 돼지 이미지 파일(png)이 없으므로,
+                // 일단 화면에서 바로 볼 수 있게 '돼지 이모지'를 크게 키워서 넣었습니다.
+                // 나중에 에셋에 이미지를 넣으면 Image("돼지이미지이름") 으로 바꾸면 됩니다.
+                Text("🐷")
+                    .font(.system(size: 180))
+                    // 돼지 주변에 살짝 그림자를 줘서 입체감을 살립니다
+                    .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
             }
             
             Spacer() // 돼지를 화면 중앙에 위치시키기 위한 하단 빈 공간
