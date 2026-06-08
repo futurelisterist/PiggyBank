@@ -44,19 +44,25 @@ struct ContentView: View {
             
             Spacer()
             
-            //돼지 저금통 버튼
-            Button(action: {
-                print("돼지 클릭됨 - 나중에 팝업 띄우기")
-            }) {
-                Image("PiggyBank")
+            ZStack {
+                //배경 동전 이미지
+                Image("Coin")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 550)
-                    .offset(x: -20, y: -120)
-                    .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 10)
-                Text("🐷")
-                    .font(.system(size: 180))
-                    .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+                    .offset(x: -10, y: -120)
+                
+                //돼지 저금통
+                Button(action: {
+                    print("돼지 클릭됨 - 나중에 팝업 띄우기")
+                }) {
+                    Image("PiggyBank2")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 550)
+                        .offset(x: 10, y: -120)
+                        .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 10)
+                }
             }
             
             Spacer()
